@@ -595,6 +595,21 @@
         <property name="layoutheight2" tag="property" attribute="name|widget" value="mysubmenu">365</property>
         <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen" value="yes">780</property>
         <property name="layoutheight2">365</property>
+        
+        <property name="layoutwidth" tag="property" attribute="name|widgetTarget" value="system">2200</property>
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect" value="Square">2200</property>
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect" value="Thumbnail">2400</property>
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect" value="Fanart">2400</property>
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect" value="Poster">2200</property>
+        <property name="layoutwidth">2200</property>
+        
+        <property name="layoutleft" tag="property" attribute="name|widgetTarget" value="system">160</property>
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect" value="Square">190</property>
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect" value="Thumbnail">-40</property>
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect" value="Fanart">-40</property>
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect" value="Poster">290</property>
+        <property name="layoutleft">290</property>
+        
         <property name="isfullscreenwidget" tag="property" attribute="name|widgetFullscreen" value="yes">true</property>
         <property name="isfullscreenwidget">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widget" value="mysubmenu">false</property>
@@ -657,6 +672,8 @@
                     <param name="shortcutsidshort" value=""/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
                     <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
+                    <param name="container_width" value="$SKINSHORTCUTS[layoutwidth]"/>
+                    <param name="container_left" value="$SKINSHORTCUTS[layoutleft]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
@@ -773,6 +790,19 @@
         <property name="layoutheight2" tag="property" attribute="name|widget.2" value="mysubmenu">365</property>
         <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen.2" value="yes">780</property>
         <property name="layoutheight2">365</property>
+        
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect.2" value="Square">2200</property>
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect.2" value="Thumbnail">2400</property>
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect.2" value="Fanart">2400</property>
+        <property name="layoutwidth" tag="property" attribute="name|widgetaspect.2" value="Poster">1900</property>
+        <property name="layoutwidth">1900</property>
+        
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect.2" value="Square">190</property>
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect.2" value="Thumbnail">-40</property>
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect.2" value="Fanart">-40</property>
+        <property name="layoutleft" tag="property" attribute="name|widgetaspect.2" value="Poster">517</property>
+        <property name="layoutleft">517</property>
+        
         <property name="labelisvisible" tag="property" attribute="name|widget.2" value="mysubmenu">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.2" value="weather">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.2" value="system">false</property>
@@ -835,6 +865,8 @@
                     <param name="shortcutsidshort" value=".2"/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
                     <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
+                    <param name="container_width" value="$SKINSHORTCUTS[layoutwidth]"/>
+                    <param name="container_left" value="$SKINSHORTCUTS[layoutleft]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
