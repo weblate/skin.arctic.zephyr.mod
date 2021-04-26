@@ -578,9 +578,11 @@
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget" value="weather">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget" value="system">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widget" value="mysubmenu">false</property>
+        <property name="isnormallayout" tag="property" attribute="name|widget" value="custom">false</property>
         <property name="isnormallayout">true</property>
         <property name="issystemlayout" tag="property" attribute="name|widgetTarget" value="system">true</property>
         <property name="issystemlayout">false</property>
+        <property name="issubmenulayout" tag="property" attribute="name|widget" value="custom">true</property>
         <property name="issubmenulayout" tag="property" attribute="name|widget" value="mysubmenu">true</property>
         <property name="issubmenulayout">false</property>
         <property name="isweatherlayout" tag="property" attribute="name|widgetTarget" value="weather">true</property>

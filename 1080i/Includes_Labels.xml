@@ -207,9 +207,9 @@
     </variable>
 
     <variable name="LabelWidgetType">
-        <value condition="!String.IsEqual(Container(211).ListItem.Property(widget),mysubmenu) + [String.IsEqual(Container(211).ListItem.Property(widgetaspect),SquareSmall) | String.IsEqual(Container(211).ListItem.Property(widgetaspect),SquareMedium)]">[COLOR=FFFF0000]![/COLOR]</value>
+        <value condition="!String.IsEqual(Container(211).ListItem.Property(widget),mysubmenu) + !String.IsEqual(Container(211).ListItem.Property(widget),custom) + [String.IsEqual(Container(211).ListItem.Property(widgetaspect),SquareSmall) | String.IsEqual(Container(211).ListItem.Property(widgetaspect),SquareMedium)]">[COLOR=FFFF0000]![/COLOR]</value>
         <value condition="String.IsEqual(Container(211).ListItem.Property(widgettarget),system)">$LOCALIZE[31263]</value>
-        <value condition="[String.IsEmpty(Container(211).ListItem.Property(widgetaspect)) | String.IsEqual(Container(211).ListItem.Property(widgetaspect),Poster)] + String.IsEqual(Container(211).ListItem.Property(widget),mysubmenu)">$LOCALIZE[22080]</value>
+        <value condition="[String.IsEmpty(Container(211).ListItem.Property(widgetaspect)) | String.IsEqual(Container(211).ListItem.Property(widgetaspect),Poster)] + [String.IsEqual(Container(211).ListItem.Property(widget),mysubmenu) | String.IsEqual(Container(211).ListItem.Property(widget),custom)]">$LOCALIZE[22080]</value>
         <value condition="[String.IsEmpty(Container(211).ListItem.Property(widgetaspect)) | String.IsEqual(Container(211).ListItem.Property(widgetaspect),Poster)] + !String.IsEqual(Container(211).ListItem.Property(widget),mysubmenu)">$LOCALIZE[31262]</value>
         <value condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),Square)">$LOCALIZE[31263]</value>
         <value condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),SquareSmall)">$LOCALIZE[37879]</value>
