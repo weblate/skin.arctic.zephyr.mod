@@ -5076,6 +5076,7 @@
     <include name="def_widgetposter">
         <param name="indicatorbackground" value="$PARAM[indicatorbackground]" default="false"/>
         <param name="visible_title_overlay" value="$PARAM[visible_title_overlay]" default="false"/>
+        <param name="visible_progress" value="$PARAM[visible_progress]" default="false"/>
         <definition>
         <control type="image">
             <left>0</left>
@@ -5110,6 +5111,17 @@
             <visible>String.IsEqual(ListItem.DBType,genre) | String.EndsWith(Container.FolderPath,Genres)</visible>
         </control>
         <include condition="$PARAM[visible_title_overlay]">Alternative_Title_Overlay</include>
+        <control type="progress">
+            <height>5</height>
+            <bottom>10</bottom>
+            <left>10</left>
+            <right>10</right>
+            <info>ListItem.PercentPlayed</info>
+            <lefttexture colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</lefttexture>
+            <midtexture colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</midtexture>
+            <righttexture colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</righttexture>
+            <visible>ListItem.IsResumable + $PARAM[visible_progress]</visible>
+        </control>        
         <control type="image">
             <left>9</left>
             <top>9</top>
