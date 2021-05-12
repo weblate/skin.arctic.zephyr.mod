@@ -127,8 +127,8 @@
         </itemlayout>
         <focusedlayout height="254" width="174" condition="Skin.HasSetting(510IconSizeSmall)">
             <control type="group">
-                <animation center="90,168" easing="inout" effect="zoom" end="120" start="100" time="300" tween="sine">Focus</animation>
-                <animation center="90,168" easing="inout" effect="zoom" end="100" start="120" time="300" tween="sine">UnFocus</animation>
+                <animation center="88,166" easing="inout" effect="zoom" end="121" start="100" time="300" tween="sine">Focus</animation>
+                <animation center="88,166" easing="inout" effect="zoom" end="100" start="121" time="300" tween="sine">UnFocus</animation>
                 <control type="image">
                     <visible>!String.IsEqual(ListItem.Label,..) + !String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(ShowDiscart510)</visible>
                     <left>11</left>
