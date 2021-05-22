@@ -5,7 +5,7 @@
     <include name="521Content">
         <param name="offset" default="72" />
         <definition>
-        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)<</visible>
+        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)</visible>
         <include content="forced_view" condition="Skin.HasSetting(enable.forcedviews)">
             <param name="string" value="$LOCALIZE[37971]" />
         </include>
