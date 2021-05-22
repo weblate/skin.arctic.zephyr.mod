@@ -1306,7 +1306,7 @@
             <include>Animation.FurnitureVisible</include>
             <visible>!Skin.HasSetting(furniture.coloredicons)</visible>
             <visible>!Skin.HasSetting(furniture.flags)</visible>
-            <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)] | [Window.IsVisible(home) + ControlGroup(301).HasFocus() + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Skin.HasSetting(home.vertical) + Skin.HasSetting(home.vertical.widgets)] + !Skin.HasSetting(hide.furniture.flags.vertical.widgets)]</visible>
+            <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)] | [Window.IsVisible(home) + ControlGroup(301).HasFocus() + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Skin.HasSetting(home.vertical) + Skin.HasSetting(home.vertical.widgets)] + !Skin.HasSetting(hide.furniture.flags.vertical.widgets)]</visible>
             <visible>!String.IsEqual(ListItem.Label,..)</visible>
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
@@ -1723,7 +1723,7 @@
             <include>Animation.FurnitureVisible</include>
             <visible>Skin.HasSetting(furniture.coloredicons)</visible>
             <visible>!Skin.HasSetting(furniture.flags)</visible>
-            <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)] | [Window.IsVisible(home) + ControlGroup(301).HasFocus() + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Skin.HasSetting(home.vertical) + Skin.HasSetting(home.vertical.widgets)] + !Skin.HasSetting(hide.furniture.flags.vertical.widgets)]</visible>
+            <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)] | [Window.IsVisible(home) + ControlGroup(301).HasFocus() + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Skin.HasSetting(home.vertical) + Skin.HasSetting(home.vertical.widgets)] + !Skin.HasSetting(hide.furniture.flags.vertical.widgets)]</visible>
             <visible>!String.IsEqual(ListItem.Label,..)</visible>
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
@@ -2487,6 +2487,25 @@
                 <textcolor>Dark2</textcolor>
                 <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)]%</label>
             </control>
+            <control type="image" description="Rotten Tomatoes">
+                <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + Skin.HasSetting(furniture.showtomatoesandmetacritics) + Skin.HasSetting(furniture.flagicons)</visible>
+                <fadetime>ExtendedFlagIconsFadetime</fadetime>
+                <centertop>50%</centertop>
+                <width>38</width>
+                <height>38</height>
+                <left>35</left>
+                <texture colordiffuse="Dark1" background="true">$VAR[RottenTomatoesAudience]</texture>
+            </control>
+            <control type="label" description="Rotten Tomatoes">
+                <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + Skin.HasSetting(furniture.showtomatoesandmetacritics) + Skin.HasSetting(furniture.flagicons)</visible>
+                <centertop>50%</centertop>
+                <width>auto</width>
+                <height>64</height>
+                <font>Tiny</font>
+                <left>3</left>
+                <textcolor>Dark2</textcolor>
+                <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)]%</label>
+            </control>
         </control>
         <control type="grouplist">
             <include>Animation.FurnitureVisible</include>
@@ -2801,6 +2820,25 @@
                 <textcolor>Dark2</textcolor>
                 <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)]%</label>
             </control>
+            <control type="image" description="Rotten Tomatoes">
+                <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + Skin.HasSetting(furniture.showtomatoesandmetacritics) + Skin.HasSetting(furniture.flagicons)</visible>
+                <fadetime>ExtendedFlagIconsFadetime</fadetime>
+                <centertop>50%</centertop>
+                <width>40</width>
+                <height>40</height>
+                <left>30</left>
+                <texture background="true">$VAR[RottenTomatoesAudienceColored]</texture>
+            </control>
+            <control type="label" description="Rotten Tomatoes">
+                <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + Skin.HasSetting(furniture.showtomatoesandmetacritics)</visible>
+                <centertop>50%</centertop>
+                <width>auto</width>
+                <height>64</height>
+                <font>Tiny</font>
+                <left>3</left>
+                <textcolor>Dark2</textcolor>
+                <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)]%</label>
+            </control>            
         </control>
     </include>
     
@@ -3416,7 +3454,7 @@
         <control type="grouplist">
             <include>Animation.FurnitureVisible</include>
             <visible>!Skin.HasSetting(furniture.nowplaying)</visible>
-            <visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
+            <visible>!Window.IsVisible(DialogVolumeBar.xml) | Player.Muted</visible>
             <visible>!Window.IsVisible(DialogNotification.xml)</visible>
             <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
             <visible>String.IsEmpty(Window(10025).Property(TvTunesIsAlive))</visible>
@@ -3689,7 +3727,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="Dark1">flags/time.png</texture>
                 <aspectratio align="left">scale</aspectratio>
-                <visible>!String.IsEmpty(ListItem.Duration)</visible>
+                <visible>!String.IsEmpty(ListItem.Duration) + !Control.IsVisible(523)</visible>
             </control>
             <control type="label">
                 <width>auto</width>
@@ -3700,6 +3738,7 @@
                 <label>$INFO[ListItem.Duration(mins:ss),, $LOCALIZE[31102]  ]</label>
                 <font>Flag</font>
                 <textcolor>Dark1</textcolor>
+                <visible>!String.IsEmpty(ListItem.Duration) + !Control.IsVisible(523)</visible>
             </control>
             <control type="label">
                 <visible>Skin.HasSetting(thumbnails.moreinfos) + !String.IsEqual(ListItem.DBType,album)</visible>

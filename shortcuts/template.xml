@@ -17,14 +17,19 @@
         <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[15000]">15000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[20000]">20000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[25000]">25000</property>
+        <property name="aspectratio" tag="property" attribute="name|widgetAspectRatio"/>
+        <property name="aspectratio">keep</property>
+        <property name="distance" tag="property" attribute="name|widgetEdgeDistance" value="yes">30</property>
+        <property name="distance">10</property>
+        <property name="widgetlisttype" tag="property" attribute="name|widgetListType"/>
+        <property name="widgetlisttype">list</property>
         <controls>
-            <control type="list" id="301">
+            <control type="$SKINSHORTCUTS[widgetlisttype]" id="301">
                 <skinshortcuts>visibility</skinshortcuts>
                 <description>Plugin Content Widget</description>
                 <left>70</left>
                 <right>70</right>
-                <top>20</top>
-                <bottom>20</bottom>                
+                <height>297</height>
                 <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
                 <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
                 <onclick condition="$SKINSHORTCUTS[IsGTO]">RunPlugin(plugin://script.service.gto?action=info&amp;item=$INFO[ListItem.Property(Item)])</onclick>
@@ -39,41 +44,77 @@
                 <itemlayout width="178" height="257" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.poster">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout width="178" height="257" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.poster.focus">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </focusedlayout>
                 <itemlayout width="254" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.square">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
+                        <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout width="254" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.square.focus">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
+                        <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </focusedlayout>
                 <itemlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.fanart">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.fanart.focus">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </focusedlayout>                
                 <itemlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.thumb">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </itemlayout>
                 <focusedlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.thumb.focus">
                         <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
                     </include>
                 </focusedlayout>
                 <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
@@ -536,6 +577,11 @@
     <!-- Widget 1 -->
     <other include="widget-vertical.1">
         <property name="id" tag="mainmenuid"/>
+        <property name="ispvrlayout" tag="property" attribute="name|widget" value="epg">true</property>
+        <property name="ispvrlayout">false</property>
+        <property name="widgetlimit" tag="property" attribute="name|widget" value="epg">5</property>
+        <property name="widgetlimit">$VAR[DefWidgetLimit]</property>        
+        <property name="isnormallayout" tag="property" attribute="name|widget" value="epg">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget" value="weather">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget" value="system">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widget" value="mysubmenu">false</property>
@@ -551,6 +597,11 @@
         <property name="layoutheight" tag="property" attribute="name|widget" value="mysubmenu">325</property>
         <property name="layoutheight" tag="property" attribute="name|widgetFullscreen" value="yes">710</property>
         <property name="layoutheight">325</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetaspect" value="SquareMedium">185</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetaspect" value="SquareSmall">135</property>
+        <property name="layoutheight2" tag="property" attribute="name|widget" value="mysubmenu">365</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen" value="yes">780</property>
+        <property name="layoutheight2">365</property>
         <property name="isfullscreenwidget" tag="property" attribute="name|widgetFullscreen" value="yes">true</property>
         <property name="isfullscreenwidget">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widget" value="mysubmenu">false</property>
@@ -569,7 +620,9 @@
         <property name="movement" tag="property" attribute="name|widgetaspect" value="Square">4</property>
         <property name="movement">7</property>
         <!-- more content -->
+        <property name="targetcontent" tag="property" attribute="name|widgetType" value="favourite">favourites</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget" value="music">music</property>
+        <property name="targetcontent" tag="property" attribute="name|widgetTarget" value="pvr">pvr</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget" value="videos">videos</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget" value="addons">addons</property>
         <property name="targetcontent">$VAR[DefWidgetTarget]</property>
@@ -600,6 +653,8 @@
         <property name="aspectratio">keep</property>
         <property name="distance" tag="property" attribute="name|widgetEdgeDistance" value="yes">30</property>
         <property name="distance">10</property>
+        <property name="orientation" tag="property" attribute="name|widget" value="epg">vertical</property>
+        <property name="orientation">horizontal</property>
         <controls>
             <control type="group" id="301$SKINSHORTCUTS[id]2199">
                 <control type="grouplist">
@@ -615,14 +670,15 @@
                 <visible>Integer.IsGreater(Container(301$SKINSHORTCUTS[id]1).NumItems,0) | Container(301$SKINSHORTCUTS[id]1).IsUpdating | String.IsEqual(Container(300).ListItem.Property(widget),mysubmenu) | String.IsEqual(Container(300).ListItem.Property(widget),custom)</visible>
                 <onclick condition="$SKINSHORTCUTS[IsGTO]">RunPlugin(plugin://script.service.gto?action=info&amp;item=$INFO[ListItem.Property(Item)])</onclick>
                 <skinshortcuts>visibility</skinshortcuts>
-                <include condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),SquareSmall)">Height125</include>
                 <include content="DefMultiWidgetContainer">
                     <param name="id" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="shortcutsidshort" value=""/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
+                    <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
+                    <param name="orientation" value="$SKINSHORTCUTS[orientation]"/>
                     <param name="AutoScrollCondition" value="!Control.HasFocus(301$SKINSHORTCUTS[id]1) + !Control.HasFocus(4752) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto)) + !String.IsEqual(Container(300).ListItem.Property(widgetListType),list) + System.IdleTime(1)"/>
                     <param name="movement" value="$SKINSHORTCUTS[movement]"/>
                 </include>
@@ -633,6 +689,10 @@
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                </include>                
+                <include content="TemplatePvrItemLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]1"/>
+                    <param name="shortcutsidshort" value=""/>
                 </include>
                 <include content="TemplateWeatherItemLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]1"/>
@@ -649,6 +709,7 @@
                     <param name="shortcutsidshort" value=""/>
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
+                    <param name="distance" value="$SKINSHORTCUTS[distance]"/>
                 </include>
                 <!-- FocusLayouts -->
                 <include content="TemplateNormalFocusLayout" condition="$SKINSHORTCUTS[isnormallayout]">
@@ -657,6 +718,10 @@
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                </include>                
+                <include content="TemplatePvrFocusLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]1"/>
+                    <param name="shortcutsidshort" value=""/>
                 </include>
                 <include content="TemplateWeatherFocusLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]1"/>
@@ -673,9 +738,10 @@
                     <param name="shortcutsidshort" value=""/>
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
+                    <param name="distance" value="$SKINSHORTCUTS[distance]"/>
                 </include>
-                <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
-                <include content="morecontent">
+                <content limit="$SKINSHORTCUTS[widgetlimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
+                <include content="morecontent" condition="Skin.HasSetting(enable.morewidget)">
                     <param name="id" value="301$SKINSHORTCUTS[id]1" />
                     <param name="content" value="$SKINSHORTCUTS[content]" />
                     <param name="targetcontent" value="$SKINSHORTCUTS[targetcontent]" />
@@ -690,7 +756,7 @@
                 </include>
                 <control type="grouplist">
                     <skinshortcuts>visibility</skinshortcuts>
-                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout]">
+                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout] | $SKINSHORTCUTS[ispvrlayout]">
                         <param name="id" value="301$SKINSHORTCUTS[id]1"/>
                         <param name="labelisvisible" value="$SKINSHORTCUTS[labelisvisible]"/>
                     </include>
@@ -722,6 +788,11 @@
     <!-- Widget 2 -->
     <other include="widget-vertical.2">
         <property name="id" tag="mainmenuid"/>
+        <property name="ispvrlayout" tag="property" attribute="name|widget.2" value="epg">true</property>
+        <property name="ispvrlayout">false</property>
+        <property name="widgetlimit" tag="property" attribute="name|widget.2" value="epg">5</property>
+        <property name="widgetlimit">$VAR[DefWidgetLimit]</property>        
+        <property name="isnormallayout" tag="property" attribute="name|widget.2" value="epg">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.2" value="weather">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.2" value="system">false</property>
         <property name="isnormallayout">true</property>
@@ -734,12 +805,18 @@
         <property name="layoutheight" tag="property" attribute="name|widget.2" value="mysubmenu">325</property>
         <property name="layoutheight" tag="property" attribute="name|widgetFullscreen.2" value="yes">710</property>
         <property name="layoutheight">325</property>
+        <property name="layoutheight2" tag="property" attribute="name|widget.2" value="mysubmenu">365</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen.2" value="yes">780</property>
+        <property name="layoutheight2">365</property>
         <property name="labelisvisible" tag="property" attribute="name|widget.2" value="mysubmenu">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.2" value="weather">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.2" value="system">false</property>
         <property name="labelisvisible">true</property>
-        <property name="content" tag="property" attribute="name|widgetPath.2"/>
-        <property name="content">$VAR[DefWidgetContent]</property>
+        <property name="contentswitch" tag="property" attribute="name|widgetPath.2"/>
+        <property name="contentswitch">$VAR[DefWidgetContent]</property>
+        <property name="content" tag="property" attribute="name|widgetEnable.2" value="yes">$SKINSHORTCUTS[contentswitch]</property>
+        <property name="contentitemmore" tag="property" attribute="name|widgetPath.2"/>
+        <property name="contentitemmore">$VAR[DefWidgetContent]</property>        
         <property name="IsGTO" tag="property" attribute="name|widget.2" value="GTO">true</property>  
         <property name="IsGTO">false</property>
         <!-- movement -->
@@ -752,6 +829,7 @@
         <property name="movement" tag="property" attribute="name|widgetaspect.2" value="Square">4</property>
         <property name="movement">7</property>
         <!-- more content -->
+        <property name="targetcontent" tag="property" attribute="name|widgetType.2" value="favourite">favourites</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.2" value="music">music</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.2" value="videos">videos</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.2" value="addons">addons</property>  
@@ -772,7 +850,7 @@
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.2" value="$NUMBER[15000]">15000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.2" value="$NUMBER[20000]">20000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.2" value="$NUMBER[25000]">25000</property>
-        <property name="widgetlisttype" tag="property" attribute="name|widgetListType"/>
+        <property name="widgetlisttype" tag="property" attribute="name|widgetListType.2"/>
         <property name="widgetlisttype">fixedlist</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.2" value="yes">true</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.2" value="no">false</property>
@@ -781,6 +859,8 @@
         <property name="aspectratio">keep</property>
         <property name="distance" tag="property" attribute="name|widgetEdgeDistance.2" value="yes">30</property>
         <property name="distance">10</property>
+        <property name="orientation" tag="property" attribute="name|widget.2" value="epg">vertical</property>
+        <property name="orientation">horizontal</property>
         <controls>
             <control type="group" id="301$SKINSHORTCUTS[id]2299">
                 <control type="grouplist">
@@ -802,9 +882,11 @@
                     <param name="id" value="301$SKINSHORTCUTS[id]2"/>
                     <param name="shortcutsidshort" value=".2"/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
+                    <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
+                    <param name="orientation" value="$SKINSHORTCUTS[orientation]"/>
                     <param name="AutoScrollCondition" value="!Control.HasFocus(301$SKINSHORTCUTS[id]2) + !Control.HasFocus(4752) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto.2)) + !String.IsEqual(Container(300).ListItem.Property(widgetListType),list) + System.IdleTime(1)"/>
                     <param name="movement" value="$SKINSHORTCUTS[movement]"/>
                 </include>
@@ -815,6 +897,10 @@
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                </include>
+                <include content="TemplatePvrItemLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]2"/>
+                    <param name="shortcutsidshort" value=".2"/>
                 </include>
                 <include content="TemplateWeatherItemLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]2"/>
@@ -834,6 +920,10 @@
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
                 </include>
+                <include content="TemplatePvrFocusLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]2"/>
+                    <param name="shortcutsidshort" value=".2"/>
+                </include>
                 <include content="TemplateWeatherFocusLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]2"/>
                     <param name="shortcutsidshort" value=".2"/>
@@ -844,10 +934,10 @@
                     <param name="shortcutsidshort" value=".2"/>
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                 </include>
-                <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
-                <include content="morecontent">
+                <content limit="$SKINSHORTCUTS[widgetlimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
+                <include content="morecontent" condition="Skin.HasSetting(enable.morewidget)">
                     <param name="id" value="301$SKINSHORTCUTS[id]2" />
-                    <param name="content" value="$SKINSHORTCUTS[content]" />
+                    <param name="content" value="$SKINSHORTCUTS[contentitemmore]" />
                     <param name="targetcontent" value="$SKINSHORTCUTS[targetcontent]" />
                     <param name="morevisible" value="$SKINSHORTCUTS[morevisible]" />
                 </include>
@@ -862,7 +952,7 @@
                 </include>
                 <control type="grouplist">
                     <skinshortcuts>visibility</skinshortcuts>
-                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout]">
+                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout] | $SKINSHORTCUTS[ispvrlayout]">
                         <param name="id" value="301$SKINSHORTCUTS[id]2"/>
                         <param name="labelisvisible" value="$SKINSHORTCUTS[labelisvisible]"/>
                     </include>
@@ -888,6 +978,11 @@
     <!-- Widget 3 -->
     <other include="widget-vertical.3">
         <property name="id" tag="mainmenuid"/>
+        <property name="ispvrlayout" tag="property" attribute="name|widget.3" value="epg">true</property>
+        <property name="ispvrlayout">false</property>
+        <property name="widgetlimit" tag="property" attribute="name|widget.3" value="epg">5</property>
+        <property name="widgetlimit">$VAR[DefWidgetLimit]</property>        
+        <property name="isnormallayout" tag="property" attribute="name|widget.3" value="epg">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.3" value="weather">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.3" value="system">false</property>
         <property name="isnormallayout">true</property>
@@ -900,12 +995,18 @@
         <property name="layoutheight" tag="property" attribute="name|widget.3" value="mysubmenu">325</property>
         <property name="layoutheight" tag="property" attribute="name|widgetFullscreen.3" value="yes">710</property>
         <property name="layoutheight">325</property>
+        <property name="layoutheight2" tag="property" attribute="name|widget.3" value="mysubmenu">365</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen.3" value="yes">780</property>
+        <property name="layoutheight2">365</property>
         <property name="labelisvisible" tag="property" attribute="name|widget.3" value="mysubmenu">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.3" value="weather">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.3" value="system">false</property>
         <property name="labelisvisible">true</property>
-        <property name="content" tag="property" attribute="name|widgetPath.3"/>
-        <property name="content">$VAR[DefWidgetContent]</property>
+        <property name="contentswitch" tag="property" attribute="name|widgetPath.3"/>
+        <property name="contentswitch">$VAR[DefWidgetContent]</property>
+        <property name="content" tag="property" attribute="name|widgetEnable.3" value="yes">$SKINSHORTCUTS[contentswitch]</property>
+        <property name="contentitemmore" tag="property" attribute="name|widgetPath.3"/>
+        <property name="contentitemmore">$VAR[DefWidgetContent]</property>        
         <property name="IsGTO" tag="property" attribute="name|widget.3" value="GTO">true</property>  
         <property name="IsGTO">false</property>
         <!-- movement -->
@@ -918,6 +1019,7 @@
         <property name="movement" tag="property" attribute="name|widgetaspect.3" value="Square">4</property>
         <property name="movement">7</property>
         <!-- more content -->
+        <property name="targetcontent" tag="property" attribute="name|widgetType.3" value="favourite">favourites</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.3" value="music">music</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.3" value="videos">videos</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.3" value="addons">addons</property>  
@@ -937,7 +1039,7 @@
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.3" value="$NUMBER[15000]">15000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.3" value="$NUMBER[20000]">20000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.3" value="$NUMBER[25000]">25000</property>
-        <property name="widgetlisttype" tag="property" attribute="name|widgetListType"/>
+        <property name="widgetlisttype" tag="property" attribute="name|widgetListType.3"/>
         <property name="widgetlisttype">fixedlist</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.3" value="yes">true</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.3" value="no">false</property>
@@ -946,6 +1048,8 @@
         <property name="aspectratio">keep</property>
         <property name="distance" tag="property" attribute="name|widgetEdgeDistance.3" value="yes">30</property>
         <property name="distance">10</property>
+        <property name="orientation" tag="property" attribute="name|widget.3" value="epg">vertical</property>
+        <property name="orientation">horizontal</property>
         <controls>
             <control type="group" id="301$SKINSHORTCUTS[id]2399">
                 <control type="grouplist">
@@ -968,8 +1072,10 @@
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="shortcutsidshort" value=".3"/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
+                    <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
+                    <param name="orientation" value="$SKINSHORTCUTS[orientation]"/>
                     <param name="AutoScrollCondition" value="!Control.HasFocus(301$SKINSHORTCUTS[id]3) + !Control.HasFocus(4752) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto.3)) + !String.IsEqual(Container(300).ListItem.Property(widgetListType),list) + System.IdleTime(1)"/>
                     <param name="movement" value="$SKINSHORTCUTS[movement]"/>
                 </include>
@@ -980,6 +1086,10 @@
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                </include>
+                <include content="TemplatePvrItemLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]3"/>
+                    <param name="shortcutsidshort" value=".3"/>
                 </include>
                 <include content="TemplateWeatherItemLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]3"/>
@@ -999,6 +1109,10 @@
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
                 </include>
+                <include content="TemplatePvrFocusLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]3"/>
+                    <param name="shortcutsidshort" value=".3"/>
+                </include>
                 <include content="TemplateWeatherFocusLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]3"/>
                     <param name="shortcutsidshort" value=".3"/>
@@ -1009,10 +1123,10 @@
                     <param name="shortcutsidshort" value=".3"/>
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                 </include>
-                <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
-                <include content="morecontent">
+                <content limit="$SKINSHORTCUTS[widgetlimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
+                <include content="morecontent" condition="Skin.HasSetting(enable.morewidget)">
                     <param name="id" value="301$SKINSHORTCUTS[id]3" />
-                    <param name="content" value="$SKINSHORTCUTS[content]" />
+                    <param name="content" value="$SKINSHORTCUTS[contentitemmore]" />
                     <param name="targetcontent" value="$SKINSHORTCUTS[targetcontent]" />
                     <param name="morevisible" value="$SKINSHORTCUTS[morevisible]" />
                 </include>
@@ -1027,7 +1141,7 @@
                 </include>
                 <control type="grouplist">
                     <skinshortcuts>visibility</skinshortcuts>
-                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout]">
+                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout] | $SKINSHORTCUTS[ispvrlayout]">
                         <param name="id" value="301$SKINSHORTCUTS[id]3"/>
                         <param name="labelisvisible" value="$SKINSHORTCUTS[labelisvisible]"/>
                     </include>
@@ -1053,6 +1167,11 @@
     <!-- Widget 4 -->
     <other include="widget-vertical.4">
         <property name="id" tag="mainmenuid"/>
+        <property name="ispvrlayout" tag="property" attribute="name|widget.4" value="epg">true</property>
+        <property name="ispvrlayout">false</property>
+        <property name="widgetlimit" tag="property" attribute="name|widget.4" value="epg">5</property>
+        <property name="widgetlimit">$VAR[DefWidgetLimit]</property>        
+        <property name="isnormallayout" tag="property" attribute="name|widget.4" value="epg">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.4" value="weather">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.4" value="system">false</property>
         <property name="isnormallayout">true</property>
@@ -1065,12 +1184,18 @@
         <property name="layoutheight" tag="property" attribute="name|widget.4" value="mysubmenu">325</property>
         <property name="layoutheight" tag="property" attribute="name|widgetFullscreen.4" value="yes">710</property>
         <property name="layoutheight">325</property>
+        <property name="layoutheight2" tag="property" attribute="name|widget.4" value="mysubmenu">365</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen.4" value="yes">780</property>
+        <property name="layoutheight2">365</property>
         <property name="labelisvisible" tag="property" attribute="name|widget.4" value="mysubmenu">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.4" value="weather">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.4" value="system">false</property>
         <property name="labelisvisible">true</property>
-        <property name="content" tag="property" attribute="name|widgetPath.4"/>
-        <property name="content">$VAR[DefWidgetContent]</property>
+        <property name="contentswitch" tag="property" attribute="name|widgetPath.4"/>
+        <property name="contentswitch">$VAR[DefWidgetContent]</property>
+        <property name="content" tag="property" attribute="name|widgetEnable.4" value="yes">$SKINSHORTCUTS[contentswitch]</property>
+        <property name="contentitemmore" tag="property" attribute="name|widgetPath.4"/>
+        <property name="contentitemmore">$VAR[DefWidgetContent]</property>        
         <property name="IsGTO" tag="property" attribute="name|widget.4" value="GTO">true</property>  
         <property name="IsGTO">false</property>
         <!-- movement -->
@@ -1083,6 +1208,7 @@
         <property name="movement" tag="property" attribute="name|widgetaspect.4" value="Square">4</property>
         <property name="movement">7</property>
         <!-- more content -->
+        <property name="targetcontent" tag="property" attribute="name|widgetType.4" value="favourite">favourites</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.4" value="music">music</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.4" value="videos">videos</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.4" value="addons">addons</property>  
@@ -1102,7 +1228,7 @@
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.4" value="$NUMBER[15000]">15000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.4" value="$NUMBER[20000]">20000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.4" value="$NUMBER[25000]">25000</property>
-        <property name="widgetlisttype" tag="property" attribute="name|widgetListType"/>
+        <property name="widgetlisttype" tag="property" attribute="name|widgetListType.4"/>
         <property name="widgetlisttype">fixedlist</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.4" value="yes">true</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.4" value="no">false</property>
@@ -1111,6 +1237,8 @@
         <property name="aspectratio">keep</property>
         <property name="distance" tag="property" attribute="name|widgetEdgeDistance.4" value="yes">30</property>
         <property name="distance">10</property>
+        <property name="orientation" tag="property" attribute="name|widget.4" value="epg">vertical</property>
+        <property name="orientation">horizontal</property>
         <controls>
             <control type="group" id="301$SKINSHORTCUTS[id]2499">
                 <control type="grouplist">
@@ -1132,9 +1260,11 @@
                     <param name="id" value="301$SKINSHORTCUTS[id]4"/>
                     <param name="shortcutsidshort" value=".4"/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
+                    <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
+                    <param name="orientation" value="$SKINSHORTCUTS[orientation]"/>
                     <param name="AutoScrollCondition" value="!Control.HasFocus(301$SKINSHORTCUTS[id]4) + !Control.HasFocus(4752) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto.4)) + !String.IsEqual(Container(300).ListItem.Property(widgetListType),list) + System.IdleTime(1)"/>
                     <param name="movement" value="$SKINSHORTCUTS[movement]"/>
                 </include>
@@ -1145,6 +1275,10 @@
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                </include>
+                <include content="TemplatePvrItemLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]4"/>
+                    <param name="shortcutsidshort" value=".4"/>
                 </include>
                 <include content="TemplateWeatherItemLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]4"/>
@@ -1164,6 +1298,10 @@
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
                 </include>
+                <include content="TemplatePvrFocusLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]4"/>
+                    <param name="shortcutsidshort" value=".4"/>
+                </include>
                 <include content="TemplateWeatherFocusLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]4"/>
                     <param name="shortcutsidshort" value=".4"/>
@@ -1174,10 +1312,10 @@
                     <param name="shortcutsidshort" value=".4"/>
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                 </include>
-                <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
-                <include content="morecontent">
+                <content limit="$SKINSHORTCUTS[widgetlimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
+                <include content="morecontent" condition="Skin.HasSetting(enable.morewidget)">
                     <param name="id" value="301$SKINSHORTCUTS[id]4" />
-                    <param name="content" value="$SKINSHORTCUTS[content]" />
+                    <param name="content" value="$SKINSHORTCUTS[contentitemmore]" />
                     <param name="targetcontent" value="$SKINSHORTCUTS[targetcontent]" />
                     <param name="morevisible" value="$SKINSHORTCUTS[morevisible]" />
                 </include>
@@ -1192,7 +1330,7 @@
                 </include>
                 <control type="grouplist">
                     <skinshortcuts>visibility</skinshortcuts>
-                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout]">
+                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout] | $SKINSHORTCUTS[ispvrlayout]">
                         <param name="id" value="301$SKINSHORTCUTS[id]4"/>
                         <param name="labelisvisible" value="$SKINSHORTCUTS[labelisvisible]"/>
                     </include>
@@ -1218,6 +1356,11 @@
     <!-- Widget 5 -->
     <other include="widget-vertical.5">
         <property name="id" tag="mainmenuid"/>
+        <property name="ispvrlayout" tag="property" attribute="name|widget.5" value="epg">true</property>
+        <property name="ispvrlayout">false</property>
+        <property name="widgetlimit" tag="property" attribute="name|widget.5" value="epg">5</property>
+        <property name="widgetlimit">$VAR[DefWidgetLimit]</property>        
+        <property name="isnormallayout" tag="property" attribute="name|widget.5" value="epg">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.5" value="weather">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.5" value="system">false</property>
         <property name="isnormallayout">true</property>
@@ -1230,12 +1373,18 @@
         <property name="layoutheight" tag="property" attribute="name|widget.5" value="mysubmenu">325</property>
         <property name="layoutheight" tag="property" attribute="name|widgetFullscreen.5" value="yes">710</property>
         <property name="layoutheight">325</property>
+        <property name="layoutheight2" tag="property" attribute="name|widget.5" value="mysubmenu">365</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen.5" value="yes">780</property>
+        <property name="layoutheight2">365</property>
         <property name="labelisvisible" tag="property" attribute="name|widget.5" value="mysubmenu">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.5" value="weather">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.5" value="system">false</property>
         <property name="labelisvisible">true</property>
-        <property name="content" tag="property" attribute="name|widgetPath.5"/>
-        <property name="content">$VAR[DefWidgetContent]</property>
+        <property name="contentswitch" tag="property" attribute="name|widgetPath.5"/>
+        <property name="contentswitch">$VAR[DefWidgetContent]</property>
+        <property name="content" tag="property" attribute="name|widgetEnable.5" value="yes">$SKINSHORTCUTS[contentswitch]</property>
+        <property name="contentitemmore" tag="property" attribute="name|widgetPath.5"/>
+        <property name="contentitemmore">$VAR[DefWidgetContent]</property>        
         <property name="IsGTO" tag="property" attribute="name|widget.5" value="GTO">true</property>  
         <property name="IsGTO">false</property>
         <!-- movement -->
@@ -1248,6 +1397,7 @@
         <property name="movement" tag="property" attribute="name|widgetaspect.5" value="Square">4</property>
         <property name="movement">7</property>
         <!-- more content -->
+        <property name="targetcontent" tag="property" attribute="name|widgetType.5" value="favourite">favourites</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.5" value="music">music</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.5" value="videos">videos</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.5" value="addons">addons</property>  
@@ -1267,7 +1417,7 @@
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.5" value="$NUMBER[15000]">15000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.5" value="$NUMBER[20000]">20000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.5" value="$NUMBER[25000]">25000</property>
-        <property name="widgetlisttype" tag="property" attribute="name|widgetListType"/>
+        <property name="widgetlisttype" tag="property" attribute="name|widgetListType.5"/>
         <property name="widgetlisttype">fixedlist</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.5" value="yes">true</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.5" value="no">false</property>
@@ -1276,6 +1426,8 @@
         <property name="aspectratio">keep</property>
         <property name="distance" tag="property" attribute="name|widgetEdgeDistance.5" value="yes">30</property>
         <property name="distance">10</property>
+        <property name="orientation" tag="property" attribute="name|widget.5" value="epg">vertical</property>
+        <property name="orientation">horizontal</property>
         <controls>
             <control type="group" id="301$SKINSHORTCUTS[id]2599">
                 <control type="grouplist">
@@ -1297,9 +1449,11 @@
                     <param name="id" value="301$SKINSHORTCUTS[id]5"/>
                     <param name="shortcutsidshort" value=".5"/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
+                    <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
+                    <param name="orientation" value="$SKINSHORTCUTS[orientation]"/>
                     <param name="AutoScrollCondition" value="!Control.HasFocus(301$SKINSHORTCUTS[id]5) + !Control.HasFocus(4752) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto.5)) + !String.IsEqual(Container(300).ListItem.Property(widgetListType),list) + System.IdleTime(1)"/>
                     <param name="movement" value="$SKINSHORTCUTS[movement]"/>
                 </include>
@@ -1310,6 +1464,10 @@
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                </include>
+                <include content="TemplatePvrItemLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]5"/>
+                    <param name="shortcutsidshort" value=".5"/>
                 </include>
                 <include content="TemplateWeatherItemLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]5"/>
@@ -1329,6 +1487,10 @@
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
                 </include>
+                <include content="TemplatePvrFocusLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]5"/>
+                    <param name="shortcutsidshort" value=".5"/>
+                </include>
                 <include content="TemplateWeatherFocusLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]5"/>
                     <param name="shortcutsidshort" value=".5"/>
@@ -1339,10 +1501,10 @@
                     <param name="shortcutsidshort" value=".5"/>
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                 </include>
-                <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
-                <include content="morecontent">
+                <content limit="$SKINSHORTCUTS[widgetlimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
+                <include content="morecontent" condition="Skin.HasSetting(enable.morewidget)">
                     <param name="id" value="301$SKINSHORTCUTS[id]5" />
-                    <param name="content" value="$SKINSHORTCUTS[content]" />
+                    <param name="content" value="$SKINSHORTCUTS[contentitemmore]" />
                     <param name="targetcontent" value="$SKINSHORTCUTS[targetcontent]" />
                     <param name="morevisible" value="$SKINSHORTCUTS[morevisible]" />
                 </include>
@@ -1357,7 +1519,7 @@
                 </include>
                 <control type="grouplist">
                     <skinshortcuts>visibility</skinshortcuts>
-                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout]">
+                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout] | $SKINSHORTCUTS[ispvrlayout]">
                         <param name="id" value="301$SKINSHORTCUTS[id]5"/>
                         <param name="labelisvisible" value="$SKINSHORTCUTS[labelisvisible]"/>
                     </include>
@@ -1383,6 +1545,11 @@
     <!-- Widget 6 -->
     <other include="widget-vertical.6">
         <property name="id" tag="mainmenuid"/>
+        <property name="ispvrlayout" tag="property" attribute="name|widget.6" value="epg">true</property>
+        <property name="ispvrlayout">false</property>
+        <property name="widgetlimit" tag="property" attribute="name|widget.6" value="epg">5</property>
+        <property name="widgetlimit">$VAR[DefWidgetLimit]</property>        
+        <property name="isnormallayout" tag="property" attribute="name|widget.6" value="epg">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.6" value="weather">false</property>
         <property name="isnormallayout" tag="property" attribute="name|widgetTarget.6" value="system">false</property>
         <property name="isnormallayout">true</property>
@@ -1395,12 +1562,18 @@
         <property name="layoutheight" tag="property" attribute="name|widget.6" value="mysubmenu">325</property>
         <property name="layoutheight" tag="property" attribute="name|widgetFullscreen.6" value="yes">710</property>
         <property name="layoutheight">325</property>
+        <property name="layoutheight2" tag="property" attribute="name|widget.6" value="mysubmenu">365</property>
+        <property name="layoutheight2" tag="property" attribute="name|widgetFullscreen.6" value="yes">780</property>
+        <property name="layoutheight2">365</property>
         <property name="labelisvisible" tag="property" attribute="name|widget.6" value="mysubmenu">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.6" value="weather">false</property>
         <property name="labelisvisible" tag="property" attribute="name|widgetTarget.6" value="system">false</property>
         <property name="labelisvisible">true</property>
-        <property name="content" tag="property" attribute="name|widgetPath.6"/>
-        <property name="content">$VAR[DefWidgetContent]</property>
+        <property name="contentswitch" tag="property" attribute="name|widgetPath.6"/>
+        <property name="contentswitch">$VAR[DefWidgetContent]</property>
+        <property name="content" tag="property" attribute="name|widgetEnable.6" value="yes">$SKINSHORTCUTS[contentswitch]</property>
+        <property name="contentitemmore" tag="property" attribute="name|widgetPath.6"/>
+        <property name="contentitemmore">$VAR[DefWidgetContent]</property>        
         <property name="IsGTO" tag="property" attribute="name|widget.6" value="GTO">true</property>  
         <property name="IsGTO">false</property>
         <!-- movement -->
@@ -1413,6 +1586,7 @@
         <property name="movement" tag="property" attribute="name|widgetaspect.6" value="Square">4</property>
         <property name="movement">7</property>
         <!-- more content -->
+        <property name="targetcontent" tag="property" attribute="name|widgetType.6" value="favourite">favourites</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.6" value="music">music</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.6" value="videos">videos</property>
         <property name="targetcontent" tag="property" attribute="name|widgetTarget.6" value="addons">addons</property>  
@@ -1432,7 +1606,7 @@
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.6" value="$NUMBER[15000]">15000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.6" value="$NUMBER[20000]">20000</property>
         <property name="widgetauto" tag="property" attribute="name|widgetAuto.6" value="$NUMBER[25000]">25000</property>
-        <property name="widgetlisttype" tag="property" attribute="name|widgetListType"/>
+        <property name="widgetlisttype" tag="property" attribute="name|widgetListType.6"/>
         <property name="widgetlisttype">fixedlist</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.6" value="yes">true</property>
         <property name="widgetclearlogothumb" tag="property" attribute="name|widgetClearLogoThumb.6" value="no">false</property>
@@ -1441,6 +1615,8 @@
         <property name="aspectratio">keep</property>
         <property name="distance" tag="property" attribute="name|widgetEdgeDistance.6" value="yes">30</property>
         <property name="distance">10</property>
+        <property name="orientation" tag="property" attribute="name|widget.6" value="epg">vertical</property>
+        <property name="orientation">horizontal</property>
         <controls>
             <control type="group" id="301$SKINSHORTCUTS[id]2699">
                 <control type="grouplist">
@@ -1462,9 +1638,11 @@
                     <param name="id" value="301$SKINSHORTCUTS[id]6"/>
                     <param name="shortcutsidshort" value=".6"/>
                     <param name="height" value="$SKINSHORTCUTS[layoutheight]"/>
+                    <param name="height2" value="$SKINSHORTCUTS[layoutheight2]"/>
                     <param name="idshort" value="$SKINSHORTCUTS[id]"/>
                     <param name="backid" value="301$SKINSHORTCUTS[id]1"/>
                     <param name="AutoTime" value="$SKINSHORTCUTS[widgetauto]"/>
+                    <param name="orientation" value="$SKINSHORTCUTS[orientation]"/>
                     <param name="AutoScrollCondition" value="!Control.HasFocus(301$SKINSHORTCUTS[id]6) + !Control.HasFocus(4752) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto.6)) + !String.IsEqual(Container(300).ListItem.Property(widgetListType),list) + System.IdleTime(1)"/>
                     <param name="movement" value="$SKINSHORTCUTS[movement]"/>
                 </include>
@@ -1475,6 +1653,10 @@
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                </include>
+                <include content="TemplatePvrItemLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]6"/>
+                    <param name="shortcutsidshort" value=".6"/>
                 </include>
                 <include content="TemplateWeatherItemLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]6"/>
@@ -1494,6 +1676,10 @@
                     <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
                     <param name="distance" value="$SKINSHORTCUTS[distance]"/>
                 </include>
+                <include content="TemplatePvrFocusLayout" condition="$SKINSHORTCUTS[ispvrlayout]">
+                    <param name="shortcutsid" value="301$SKINSHORTCUTS[id]6"/>
+                    <param name="shortcutsidshort" value=".6"/>
+                </include>
                 <include content="TemplateWeatherFocusLayout" condition="$SKINSHORTCUTS[isweatherlayout]">
                     <param name="shortcutsid" value="301$SKINSHORTCUTS[id]6"/>
                     <param name="shortcutsidshort" value=".6"/>
@@ -1504,10 +1690,10 @@
                     <param name="shortcutsidshort" value=".6"/>
                     <param name="shortcutsclearlogo" value="$SKINSHORTCUTS[widgetclearlogothumb]"/>
                 </include>
-                <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
-                <include content="morecontent">
+                <content limit="$SKINSHORTCUTS[widgetlimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>
+                <include content="morecontent" condition="Skin.HasSetting(enable.morewidget)">
                     <param name="id" value="301$SKINSHORTCUTS[id]6" />
-                    <param name="content" value="$SKINSHORTCUTS[content]" />
+                    <param name="content" value="$SKINSHORTCUTS[contentitemmore]" />
                     <param name="targetcontent" value="$SKINSHORTCUTS[targetcontent]" />
                     <param name="morevisible" value="$SKINSHORTCUTS[morevisible]" />
                 </include>
@@ -1522,7 +1708,7 @@
                 </include>
                 <control type="grouplist">
                     <skinshortcuts>visibility</skinshortcuts>
-                    <include content="FullScreenInfoSub" condition="true">
+                    <include content="FullScreenInfoSub" condition="$SKINSHORTCUTS[isnormallayout] | $SKINSHORTCUTS[ispvrlayout]">
                         <param name="id" value="301$SKINSHORTCUTS[id]6"/>
                         <param name="labelisvisible" value="$SKINSHORTCUTS[labelisvisible]"/>
                     </include>
@@ -1557,16 +1743,26 @@
         <property name="aspectratio">keep</property>
         <property name="IsGTO" tag="property" attribute="name|widget" value="GTO">true</property>  
         <property name="IsGTO">false</property>
+        <property name="aspectratio" tag="property" attribute="name|widgetAspectRatio"/>
+        <property name="aspectratio">keep</property>
+        <property name="distance" tag="property" attribute="name|widgetEdgeDistance" value="yes">30</property>
+        <property name="distance">10</property>
+        <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[5000]">5000</property>
+        <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[7000]">7000</property>
+        <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[10000]">10000</property>
+        <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[15000]">15000</property>
+        <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[20000]">20000</property>
+        <property name="widgetauto" tag="property" attribute="name|widgetAuto" value="$NUMBER[25000]">25000</property>
         <controls>
             <control type="fixedlist" id="301">
                 <skinshortcuts>visibility</skinshortcuts>
                 <visible>!String.Contains(Container(300).ListItem.Property(widget),weather)</visible>
-                <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301) + !Control.HasFocus(4752)">Conditional</animation>
-                <autoscroll time="10000">!Control.HasFocus(301) + !Control.HasFocus(4752) + !Skin.HasSetting(NoAutoScroll)</autoscroll>
+                <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301) + !Control.HasFocus(4752) + !Skin.HasSetting(widgets.fade)">Conditional</animation>
+                <autoscroll time="$SKINSHORTCUTS[widgetauto]">!Control.HasFocus(301) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto)) + System.IdleTime(1)</autoscroll>
                 <top>330</top>
                 <left>518</left>
                 <width>1876</width>
-                <height>325</height>
+                <height>365</height>
                 <onright>noop</onright>
                 <onback condition="!Integer.IsEqual(Container(301).Position,0) | Container(301).HasPrevious">PageUp</onback>
                 <onback condition="!Integer.IsEqual(Container(301).Position,0) | Container(301).HasPrevious">PageUp</onback>
@@ -1585,41 +1781,61 @@
                 <itemlayout height="325" width="222" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.poster">
                         <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </itemlayout>
                 <itemlayout height="325" width="325" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.square">
                         <param name="id" value="301"/>
+                        <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
+                        <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </itemlayout>
                 <itemlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.fanart">
                         <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </itemlayout>
                 <itemlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.thumb">
                         <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </itemlayout>
                 <focusedlayout height="325" width="222" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.poster.focus">
                         <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </focusedlayout>
                 <focusedlayout height="325" width="325" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.square.focus">
                         <param name="id" value="301"/>
+                        <param name="aspectratio" value="$SKINSHORTCUTS[aspectratio]"/>
+                        <param name="distance" value="$SKINSHORTCUTS[distance]"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </focusedlayout>
                 <focusedlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.fanart.focus">
                         <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </focusedlayout>                
                 <focusedlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
                     <include content="include.widget.thumb.focus">
                         <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
                     </include>
                 </focusedlayout>
                 <content limit="$VAR[DefWidgetLimit]" target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sort]">$SKINSHORTCUTS[content]</content>

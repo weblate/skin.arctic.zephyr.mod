@@ -235,10 +235,35 @@
     <property property="widgetAuto" label=" 25">$NUMBER[25000]</property>
     
     <!-- Widget List Type? -->
-    <propertySettings property="widgetListType" buttonID="4191" title="$LOCALIZE[37791]"/>
+    <propertySettings property="widgetListType" buttonID="41911" title="$LOCALIZE[37791]"/>
     <property property="widgetListType" label="$LOCALIZE[31148]">wraplist</property>
     <property property="widgetListType" label="$LOCALIZE[37792]">list</property>
     <property property="widgetListType" label="$LOCALIZE[37793]">fixedlist</property>
+    
+    <propertySettings property="widgetListType.2" buttonID="41912" title="$LOCALIZE[37791]"/>
+    <property property="widgetListType.2" label="$LOCALIZE[31148]">wraplist</property>
+    <property property="widgetListType.2" label="$LOCALIZE[37792]">list</property>
+    <property property="widgetListType.2" label="$LOCALIZE[37793]">fixedlist</property>
+    
+    <propertySettings property="widgetListType.3" buttonID="41913" title="$LOCALIZE[37791]"/>
+    <property property="widgetListType.3" label="$LOCALIZE[31148]">wraplist</property>
+    <property property="widgetListType.3" label="$LOCALIZE[37792]">list</property>
+    <property property="widgetListType.3" label="$LOCALIZE[37793]">fixedlist</property>
+    
+    <propertySettings property="widgetListType.4" buttonID="41914" title="$LOCALIZE[37791]"/>
+    <property property="widgetListType.4" label="$LOCALIZE[31148]">wraplist</property>
+    <property property="widgetListType.4" label="$LOCALIZE[37792]">list</property>
+    <property property="widgetListType.4" label="$LOCALIZE[37793]">fixedlist</property>
+    
+    <propertySettings property="widgetListType.5" buttonID="41915" title="$LOCALIZE[37791]"/>
+    <property property="widgetListType.5" label="$LOCALIZE[31148]">wraplist</property>
+    <property property="widgetListType.5" label="$LOCALIZE[37792]">list</property>
+    <property property="widgetListType.5" label="$LOCALIZE[37793]">fixedlist</property>
+    
+    <propertySettings property="widgetListType.6" buttonID="41916" title="$LOCALIZE[37791]"/>
+    <property property="widgetListType.6" label="$LOCALIZE[31148]">wraplist</property>
+    <property property="widgetListType.6" label="$LOCALIZE[37792]">list</property>
+    <property property="widgetListType.6" label="$LOCALIZE[37793]">fixedlist</property>
     
     <!-- Override Actions Because Im A Dummy Who Doesnt Know The Correct Window IDs To Use -->
     <override action="ActivateWindow(3201)">
@@ -274,7 +299,6 @@
     <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
     <icon labelID="radio">special://skin/extras/icons/radio.png</icon>
     <icon labelID="weather">special://skin/extras/icons/sun.png</icon>
-    <icon labelID="settings">special://skin/extras/icons/settings.png</icon>
     <icon labelID="13200">special://skin/extras/icons/actor.png</icon>
     <icon labelID="10007">special://skin/extras/icons/sysinfo.png</icon>
     <icon labelID="1036">special://skin/extras/icons/favourites.png</icon>
@@ -285,7 +309,6 @@
     <icon labelID="3">special://skin/extras/icons/film.png</icon>
     <icon labelID="19020">special://skin/extras/icons/livetv.png</icon>
     <icon labelID="2">special://skin/extras/icons/songs.png</icon>
-    <icon labelID="1">special://skin/extras/icons/pictures.png</icon>
     <icon labelID="8">special://skin/extras/icons/sun.png</icon>
     <icon labelID="24001">special://skin/extras/icons/addons.png</icon>
     <icon labelID="14036">special://skin/extras/icons/network.png</icon>
@@ -495,6 +518,7 @@
     <thumbnail label="musicvideo.png">special://skin/extras/icons/musicvideo.png</thumbnail>
     <thumbnail label="mute.png">special://skin/extras/icons/mute.png</thumbnail>
     <thumbnail label="netflix.png">special://skin/extras/icons/netflix.png</thumbnail>
+    <thumbnail label="netflix2.png">special://skin/extras/icons/netflix2.png</thumbnail>
     <thumbnail label="network.png">special://skin/extras/icons/network.png</thumbnail>
     <thumbnail label="newspaper.png">special://skin/extras/icons/newspaper.png</thumbnail>
     <thumbnail label="nfl.png">special://skin/extras/icons/nfl.png</thumbnail>
@@ -666,6 +690,10 @@
                 <content>pvr-radio</content>
             </node>
         </node>
+        <node label="37924" condition="System.AddonIsEnabled(script.service.gto)">
+            <shortcut label="$ADDON[script.service.gto 30116]" type="31103" icon="DefaultTVShows.png">RunPlugin(plugin://script.service.gto?action=scrape)</shortcut>
+            <shortcut label="$ADDON[script.service.gto 30115]" type="31103" icon="DefaultTVShows.png">RunPlugin(plugin://plugin.service.gto?action=change_scraper)</shortcut>
+        </node>
         <node label="32020">
             <content>picturesources</content>
         </node>
@@ -733,6 +761,7 @@
             <shortcut widget="Embuary" type="37929" label="$ADDON[script.embuary.info 32032]" icon="DefaultMovies.png" widgetTarget="video">plugin://script.embuary.info/movie/popular</shortcut> 
             <shortcut widget="Embuary" type="37929" label="$ADDON[script.embuary.info 32029]" icon="DefaultMovies.png" widgetTarget="video">plugin://script.embuary.info/movie/top_rated</shortcut> 
             <shortcut widget="Embuary" type="37929" label="$ADDON[script.embuary.info 32050]" icon="DefaultMovies.png" widgetTarget="video">plugin://script.embuary.info/discover/movie/all</shortcut>           
+            <shortcut widget="4KMovies" type="37929" label="37990" icon="DefaultMovies.png" widgetTarget="video">special://skin/extras/playlists/4KMovies.xsp</shortcut>           
             <shortcut widget="mysubmenu" type="37929" label="135" icon="special://skin/extras/icons/genre.png" widgetTarget="video">library://video/movies/genres.xml</shortcut>
             <shortcut widget="Embuary" type="37929" label="37914" icon="DefaultGenre.png" widgetTarget="video">plugin://script.embuary.helper/?info=getgenre&amp;type=movie</shortcut>
         </node>
@@ -741,6 +770,7 @@
                 <shortcut widget="TvShowsTitles" type="37929" label="10024" icon="DefaultMovies.png" widgetTarget="video">library://video/tvshows/titles.xml</shortcut>
                 <shortcut widget="NewTvShows" type="37929" label="37568" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video">special://skin/extras/playlists/NewShows.xsp</shortcut>
                 <shortcut widget="NewUnwatchedTvShows" type="37929" label="37771" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video">special://skin/extras/playlists/NewUnwatchedShows.xsp</shortcut>
+                <shortcut widget="UnwatchedTvShows" type="37929" label="38000" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video">special://skin/extras/playlists/UnwatchedTvShows.xsp</shortcut>
                 <shortcut widget="RecentTvShows" type="37929" label="37569" icon="DefaultMusicRecentlyPlayed.png" widgetTarget="video">special://skin/extras/playlists/RecentTvShows.xsp</shortcut>
                 <shortcut widget="InProgress" type="37929" label="37570" icon="special://skin/extras/icons/timer.png" widgetTarget="video">special://skin/extras/playlists/InProgressTvShows.xsp</shortcut>
                 <shortcut widget="RandomTvShows" type="37929" label="37571" icon="DefaultTVShows.png" widgetTarget="video">special://skin/extras/playlists/RandomTvShows.xsp</shortcut>
@@ -807,10 +837,28 @@
             </node>
         </node>
         <node label="31103">
+            <node label="$LOCALIZE[37999]" condition="Skin.HasSetting(home.vertical.widgets)">
+                <shortcut widget="epg" type="37929" label="37558" icon="DefaultMovies.png" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
+                <shortcut widget="epg" type="37929" label="37559" icon="DefaultTVShows.png" widgetTarget="pvr">pvr://channels/tv/*</shortcut>
+                <shortcut widget="epg" type="37929" label="$LOCALIZE[19040]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://timers/tv/timers</shortcut>
+            </node>
             <shortcut widget="LastPlayedChannels" type="37929" label="37558" icon="DefaultTVShows.png" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
             <shortcut widget="AllChannels" type="37929" label="37559" icon="DefaultTVShows.png" widgetTarget="pvr">pvr://channels/tv/*</shortcut>
             <shortcut widget="AllChannelGroups" type="37929" label="19173" icon="DefaultTVShows.png" widgetTarget="tvguide">pvr://channels/tv/</shortcut>
-            <shortcut widget="GTO" label="37924" type="37929" icon="DefaultTVShows.png" condition="System.AddonIsEnabled(script.service.gto)" widgetTarget="pvr">plugin://script.service.gto?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]</shortcut>
+            <shortcut widget="ActiveRecordings" type="37929" label="$LOCALIZE[37991]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
+            <shortcut widget="GroupedActiveRecordings" type="37929" label="$LOCALIZE[37992]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=grouped</shortcut>
+            <shortcut widget="DeletedRecordings" type="37929" label="$LOCALIZE[19184]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=flat</shortcut>
+            <shortcut widget="GroupedDeletedRecordings" type="37929" label="$LOCALIZE[37993]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=grouped</shortcut>
+            <shortcut widget="Timers" type="37929" label="$LOCALIZE[19040]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://timers/tv/timers</shortcut>
+            <node label="37924">
+                <shortcut widget="GTO" label="$ADDON[script.service.gto 30104]: $INFO[Window(Home).Property(GTO.Provider)]" type="37929" icon="DefaultTVShows.png" condition="System.AddonIsEnabled(script.service.gto)" widgetTarget="pvr">plugin://script.service.gto?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]</shortcut>            
+            </node>
+        </node>
+        <node label="19021">
+            <shortcut widget="RadioAllChannels" type="37929" label="$LOCALIZE[19216]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/radio/*</shortcut>
+            <shortcut widget="RadioLastPlayedChannels" type="37929" label="$LOCALIZE[37998]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
+            <shortcut widget="RadioActiveRecordings" type="37929" label="$LOCALIZE[10706]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
+            <shortcut widget="RadioTimers" type="37929" label="$LOCALIZE[10708]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://timers/radio/timers</shortcut>
         </node>
         <node label="8">
             <shortcut label="$LOCALIZE[37732]" type="37929" icon="sun.png" widget="weatherdaily" condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))" widgetType="widget" widgetTarget="weather">$INCLUDE[skinshortcuts-template-WeatherDailyInfoContent]</shortcut>
@@ -947,4 +995,10 @@
     <onback to="9106">11008</onback>
     <onback to="9106">11009</onback>
     <onback to="9106">11011</onback>
+    <onback to="9101">41911</onback>
+    <onback to="9102">41912</onback>
+    <onback to="9103">41913</onback>
+    <onback to="9104">41914</onback>
+    <onback to="9105">41915</onback>
+    <onback to="9106">41916</onback>
 </overrides>
