@@ -2071,7 +2071,7 @@
     <include name="MultiWidgetsSubLabelDefinition">
         <font>Tiny</font>
         <width>auto</width>
-        <height>36</height>
+        <height>40</height>
         <align>left</align>
         <textcolor>Dark2</textcolor>
     </include>

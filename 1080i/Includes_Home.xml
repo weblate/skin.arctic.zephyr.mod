@@ -6396,7 +6396,7 @@
                         <param name="top" value="-295" />
                     </include>
                     <include content="def_top" condition="Skin.HasSetting(homemenu.clean.flix) + !Skin.HasSetting(hidewidgettitle)">
-                        <param name="top" value="-280" />
+                        <param name="top" value="-335" />
                     </include>                    
                     <include content="def_top" condition="Skin.HasSetting(homemenu.clean.flix) + [Skin.HasSetting(home.oldmenuheight) | Skin.HasSetting(submenu.compatibility)]">
                         <param name="top" value="-290" />
@@ -6422,6 +6422,14 @@
                         <param name="id" value="$PARAM[id]"/>
                     </include>
                     <include condition="Skin.HasSetting(homemenu.netflix) + !Skin.HasSetting(home.netflix.clearlogo) | Skin.HasSetting(homemenu.clean.flix)">IntentButton</include>
+                    <control type="label">
+                        <font>Tiny</font>
+                        <width>auto</width>
+                        <height>40</height>
+                        <align>left</align>
+                        <textcolor>Dark2</textcolor>
+                        <label fallback="19055">$INFO[Container($PARAM[id]).ListItem.Tagline]</label>
+                    </control>
                     <include content="MultiWidgetsPlotLabel" condition="Skin.HasSetting(homemenu.netflix) + !Skin.HasSetting(homemenu.clean.flix)">
                         <param name="id" value="$PARAM[id]"/>
                         <param name="plotminheight" value="0"/>
