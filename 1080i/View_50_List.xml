@@ -1069,7 +1069,7 @@
         <control type="label">
             <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[31527])</visible>
             <posx>30</posx>
-            <width>auto</width>
+            <width>900</width>
             <aligny>center</aligny>
             <height>64</height>
             <font>SmallNavi</font>
