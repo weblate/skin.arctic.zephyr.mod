@@ -2658,7 +2658,7 @@
             </control>
             <include>Furniture_Clock</include>
             <control type="group">
-                <animation effect="slide" start="0" end="0,163" time="150" condition="!Control.HasFocus(300) + !Control.HasFocus(302) + $EXP[HasHomemenuAutoSlideOutAnimation]">Conditional</animation>
+                <animation effect="slide" start="0" end="0,163" time="150" condition="String.IsEqual(Window(home).Property(fade_out),1) + $EXP[HasHomemenuAutoSlideOutAnimation]">Conditional</animation>
                 <control type="image">
                     <visible>Integer.IsGreater(Container(300).NumItems,6)</visible>
                     <top>962</top>
@@ -2711,6 +2711,7 @@
 
         <!-- Sub Menu -->
         <control type="group">
+            <animation effect="slide" start="0" end="0,163" time="150" condition="String.IsEqual(Window(home).Property(fade_out),1) + $EXP[HasHomemenuAutoSlideOutAnimation]">Conditional</animation>
             <animation type="Conditional" condition="Control.HasFocus(302)" reversible="false">
                 <effect type="fade" start="0" end="100" time="250" delay="0" tween="cubic" easing="inout"/>
                 <effect type="slide" start="0,48" end="0" center="auto" tween="back" easing="out" time="400" delay="0"/>
@@ -2837,6 +2838,7 @@
 
     <include name="HomeSubMenu2">
         <control type="group">
+            <animation effect="slide" start="0" end="0,163" time="150" condition="String.IsEqual(Window(home).Property(fade_out),1) + $EXP[HasHomemenuAutoSlideOutAnimation]">Conditional</animation>
             <animation type="Conditional" condition="Control.HasFocus(302)" reversible="false">
                 <effect type="slide" start="0,24" end="0" time="100" delay="200"/>
                 <effect type="fade" start="0" end="100" time="200" delay="200"/>

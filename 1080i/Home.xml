@@ -16,7 +16,6 @@
 
         <!-- Hidden Lists -->
         <include condition="!$EXP[HomeIsVerticalMultiWidgets] + !$EXP[HomeIsModernMultiWidgets]">MovieSetsList</include>
-        <include condition="$EXP[HasHomemenuAutoSlideOutAnimation]">SlideOutHomemenuButton</include>
         <include>HomeBackgroundPlaylist</include>
         <include>AlbumAndSetsCount</include>
         <include>HomeActorsEmbuary</include>
