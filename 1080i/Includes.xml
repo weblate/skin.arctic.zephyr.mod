@@ -3321,7 +3321,6 @@
             <include>HiddenButton</include>
             <onfocus>AlarmClock(slide_out,SetProperty(fade_out,1,home),00:05,silent)</onfocus>
             <onunfocus>ClearProperty(fade_out,home)</onunfocus>
-            <onunfocus>ClearProperty(fade_out,home)</onunfocus>
         </control>
     </include>
     
