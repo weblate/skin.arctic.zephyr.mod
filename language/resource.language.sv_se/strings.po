@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2025-11-08 09:13+0000\n"
+"PO-Revision-Date: 2026-11-02 22:25+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-arctic-zephyr-mod/sv_se/>\n"
 "Language: sv_se\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.11\n"
 
 msgctxt "#31000"
 msgid "Limit number of items in widget"
@@ -153,10 +153,9 @@ msgctxt "#31033"
 msgid "Use fanart instead of landscape on seasons"
 msgstr "Använd fanart i stället för landskap på säsonger"
 
-#, fuzzy
 msgctxt "#31034"
 msgid "Hide bar/CD on lyrics"
-msgstr "Dölj bar/CD på texter"
+msgstr "Dölj fält/skivbild i sångtexter"
 
 msgctxt "#31035"
 msgid "Show PVR technical info"
@@ -370,10 +369,9 @@ msgctxt "#31090"
 msgid "New time format"
 msgstr "Nytt tidsformat"
 
-#, fuzzy
 msgctxt "#31091"
 msgid "Double-Flix Banner"
-msgstr "Double-Flix Banner"
+msgstr "Double-Flix-banderoll"
 
 msgctxt "#31092"
 msgid "Flip fanart/banner"
@@ -527,10 +525,9 @@ msgctxt "#31129"
 msgid "MPAA rating (media flags section)"
 msgstr "MPAA-klassificering (sektion med medieflaggor)"
 
-#, fuzzy
 msgctxt "#31130"
 msgid "Focus squares"
-msgstr "Fokus rutor"
+msgstr "Fokusfyrkanter"
 
 msgctxt "#31131"
 msgid "Accents, highlights, focusbuttons"
@@ -964,10 +961,9 @@ msgctxt "#31239"
 msgid "Current Color"
 msgstr "Nuvarande färg"
 
-#, fuzzy
 msgctxt "#31240"
 msgid "Square Light"
-msgstr "Fyrkantig lampa"
+msgstr "Ljus fyrkant"
 
 msgctxt "#31241"
 msgid "Icons Info"
@@ -1197,10 +1193,9 @@ msgctxt "#31297"
 msgid "       "
 msgstr "       "
 
-#, fuzzy
 msgctxt "#31298"
 msgid "Video / Music Infodialog"
-msgstr "Video / Musik Infodialog"
+msgstr "Video-/musikinforuta"
 
 msgctxt "#31299"
 msgid "Show plot on HUB"
@@ -1330,10 +1325,9 @@ msgctxt "#31332"
 msgid "More of"
 msgstr "Mer om"
 
-#, fuzzy
 msgctxt "#31333"
 msgid "Poster Wall Small"
-msgstr "Poster vägg liten"
+msgstr "Liten affischvägg"
 
 msgctxt "#31334"
 msgid "5"
@@ -1363,10 +1357,9 @@ msgctxt "#31340"
 msgid "Auto-scrolling"
 msgstr "Automatisk rullning"
 
-#, fuzzy
 msgctxt "#31341"
 msgid "Widget-listtype"
-msgstr "Widget-listtyp"
+msgstr "Widgetlisttyp"
 
 msgctxt "#31342"
 msgid "List"
@@ -1376,10 +1369,9 @@ msgctxt "#31343"
 msgid "Fixed list"
 msgstr "Fast lista"
 
-#, fuzzy
 msgctxt "#31345"
 msgid "Texture/Icon on infopage"
-msgstr "Textur/Icon på infopage"
+msgstr "Textur/ikon på infosida"
 
 msgctxt "#31346"
 msgid "Studio logo"
@@ -1405,7 +1397,6 @@ msgctxt "#31352"
 msgid "Switch to full screen mode when music starts playing"
 msgstr "Växla till helskärmsläge när musiken börjar spelas"
 
-#, fuzzy
 msgctxt "#31354"
 msgid "Animate fanart/slideshow"
 msgstr "Animera fanart/bildspel"
@@ -1428,7 +1419,7 @@ msgstr "Uttoningstid"
 
 msgctxt "#31359"
 msgid "Customise power menu"
-msgstr "Anpassa ernergimenyn"
+msgstr "Anpassa energimenyn"
 
 msgctxt "#31360"
 msgid "Log off: $INFO[system.profilename]"
@@ -1450,16 +1441,14 @@ msgctxt "#31364"
 msgid "Shutdown in: [B]$INFO[System.Alarmpos][/B]"
 msgstr "Avstängning om: [B]$INFO[System.Alarmpos][/B]"
 
-#, fuzzy
 msgctxt "#31365"
 msgid "Use IMDB trailers (requires plugin.video.imdb.trailers)"
-msgstr "Använd IMDB-trailers (kräver plugin.video.imdb.trailers)"
+msgstr "Använd IMDb-trailrar (kräver plugin.video.imdb.trailers)"
 
 msgctxt "#31366"
 msgid "Show Filenames"
 msgstr "Visa filnamn"
 
-#, fuzzy
 msgctxt "#31367"
 msgid "Focus Bars (List Views)"
 msgstr "Fokusfält (listvyer)"
@@ -1468,10 +1457,9 @@ msgctxt "#31368"
 msgid "Show unwatched episodes count"
 msgstr "Visa osedda antal avsnitt"
 
-#, fuzzy
 msgctxt "#31369"
 msgid "Shifted ClearArt"
-msgstr "Shifted ClearArt"
+msgstr "Förskjuten ClearArt"
 
 msgctxt "#31370"
 msgid "Year of release"
@@ -1505,7 +1493,6 @@ msgctxt "#31377"
 msgid "TBD"
 msgstr "TBD"
 
-#, fuzzy
 msgctxt "#31378"
 msgid "Fallback label for ratings in list views"
 msgstr "Reservetikett för betyg i listvyer"
@@ -1526,7 +1513,6 @@ msgctxt "#31382"
 msgid "center"
 msgstr "center"
 
-#, fuzzy
 msgctxt "#31383"
 msgid "Fanart with ClearLogo"
 msgstr "Fanart med ClearLogo"
@@ -1543,10 +1529,9 @@ msgctxt "#31386"
 msgid "Also use for system-icons"
 msgstr "Använd även för systemikoner"
 
-#, fuzzy
 msgctxt "#31387"
 msgid "DiscArt Fallback-Type"
-msgstr "DiscArt Fallback-Typ"
+msgstr "Reservtyp för DiscArt"
 
 msgctxt "#31388"
 msgid "CD"
@@ -1584,10 +1569,9 @@ msgctxt "#31396"
 msgid "Gradient"
 msgstr "Gradient"
 
-#, fuzzy
 msgctxt "#31397"
 msgid "Focus Bars (Settings, Homemenu Shortcuts)"
-msgstr "Fokusfält (Inställningar, genvägar till hemmenyn)"
+msgstr "Fokusfält (inställningar, hemmenygenvägar)"
 
 msgctxt "#31398"
 msgid "RAM"
@@ -1605,7 +1589,6 @@ msgctxt "#31401"
 msgid "Aspect ratio"
 msgstr "Bildförhållande"
 
-#, fuzzy
 msgctxt "#31402"
 msgid "Select aspect ratio for square widget"
 msgstr "Välj bildförhållande för kvadratisk widget"
@@ -1622,15 +1605,13 @@ msgctxt "#31405"
 msgid "Sunset at"
 msgstr "Solnedgång vid"
 
-#, fuzzy
 msgctxt "#31406"
 msgid "Square small"
-msgstr "Fyrkantig liten"
+msgstr "Liten fyrkant"
 
-#, fuzzy
 msgctxt "#31407"
 msgid "Square medium"
-msgstr "Fyrkantig medium"
+msgstr "Medelstor fyrkant"
 
 msgctxt "#31408"
 msgid "Alternative"
@@ -1640,10 +1621,9 @@ msgctxt "#31409"
 msgid "Bigger"
 msgstr "Större"
 
-#, fuzzy
 msgctxt "#31410"
 msgid "Home menu bar"
-msgstr "Menyfältet Hem"
+msgstr "Hemmenyfält"
 
 msgctxt "#31411"
 msgid "Fullscreen widget"
@@ -1725,10 +1705,9 @@ msgctxt "#31430"
 msgid "item"
 msgstr "objekt"
 
-#, fuzzy
 msgctxt "#31431"
 msgid "Use old Arctic Zephyr window animation"
-msgstr "Använd gamla Arctic Zephyr fönsteranimering"
+msgstr "Använd den gamla fönsteranimeringen i Arctic Zephyr"
 
 msgctxt "#31432"
 msgid "Alternative layout"
@@ -1750,10 +1729,9 @@ msgctxt "#31436"
 msgid "Most played Songs"
 msgstr "Mest spelade låtar"
 
-#, fuzzy
 msgctxt "#31437"
 msgid "Use old jumpbar"
-msgstr "Använd gamla hoppstången"
+msgstr "Använd den gamla hoppraden"
 
 msgctxt "#31438"
 msgid "Genre Poster"
@@ -1775,10 +1753,9 @@ msgctxt "#31443"
 msgid "Subtitle icon"
 msgstr "Undertextikon"
 
-#, fuzzy
 msgctxt "#31444"
 msgid "Subtitle extended info"
-msgstr "Undertext utökad info"
+msgstr "Utökad undertextinformation"
 
 msgctxt "#31445"
 msgid "Reminder enabled"
@@ -1788,16 +1765,14 @@ msgctxt "#31446"
 msgid "Reminder Rule enabled"
 msgstr "Påminnelseregel aktiverad"
 
-#, fuzzy
 msgctxt "#31447"
 msgid "German Telecast Offers"
-msgstr "Erbjudanden om tysk tv-sändning"
+msgstr "Tyska sändningserbjudanden"
 
 msgctxt "#31448"
 msgid "Debugging"
 msgstr "Felsökning"
 
-#, fuzzy
 msgctxt "#31449"
 msgid "Extended debugging information"
 msgstr "Utökad felsökningsinformation"
@@ -1818,15 +1793,13 @@ msgctxt "#31453"
 msgid "Edge distance"
 msgstr "Avstånd till kant"
 
-#, fuzzy
 msgctxt "#31454"
 msgid "30px"
-msgstr "30px"
+msgstr "30 px"
 
-#, fuzzy
 msgctxt "#31455"
 msgid "Path intros"
-msgstr "Inträden till banor"
+msgstr "Sökvägsintroduktioner"
 
 msgctxt "#31456"
 msgid "Trailer count"
@@ -1868,10 +1841,9 @@ msgctxt "#31465"
 msgid "Random movies and episodes"
 msgstr "Slumpmässiga filmer och avsnitt"
 
-#, fuzzy
 msgctxt "#31466"
 msgid "Recent movies and episodes"
-msgstr "Senaste filmerna och avsnitten"
+msgstr "Senaste filmer och avsnitt"
 
 msgctxt "#31467"
 msgid "disabled"
@@ -1889,7 +1861,6 @@ msgctxt "#31470"
 msgid "Fixes"
 msgstr "Fixar"
 
-#, fuzzy
 msgctxt "#31471"
 msgid "Hidden video window to prevent audio errors"
 msgstr "Dolt videofönster för att förhindra ljudfel"
@@ -1906,10 +1877,9 @@ msgctxt "#31474"
 msgid "Configure custom widget"
 msgstr "Konfigurera anpassad widget"
 
-#, fuzzy
 msgctxt "#31475"
 msgid "Netflix fanart window"
-msgstr "Netflix fanart fönster"
+msgstr "Netflix-fanartfönster"
 
 msgctxt "#31476"
 msgid "Boxed Set"
@@ -1923,10 +1893,9 @@ msgctxt "#31478"
 msgid "Indicators"
 msgstr "Indikatorer"
 
-#, fuzzy
 msgctxt "#31479"
 msgid "Clear home menu bar"
-msgstr "Rensa hemmenyns fält"
+msgstr "Rensa hemmenyfältet"
 
 msgctxt "#31480"
 msgid "HDR"
@@ -1944,7 +1913,6 @@ msgctxt "#31483"
 msgid "Audio Channels"
 msgstr "Ljudkanaler"
 
-#, fuzzy
 msgctxt "#31484"
 msgid "Spotlight widget path"
 msgstr "Sökväg för Spotlight-widget"
@@ -1961,17 +1929,14 @@ msgctxt "#31487"
 msgid "CPU"
 msgstr "CPU"
 
-#, fuzzy
 msgctxt "#31488"
 msgid "On focus don't slide left"
-msgstr "Vid fokus, glida inte åt vänster"
+msgstr "Glid inte åt vänster vid fokus"
 
-#, fuzzy
 msgctxt "#31489"
 msgid "Underlined homemenu items"
 msgstr "Understrukna hemmenyobjekt"
 
-#, fuzzy
 msgctxt "#31490"
 msgid "Auto scrolling widget title"
 msgstr "Widgettitel med automatisk rullning"
@@ -2016,30 +1981,25 @@ msgctxt "#31500"
 msgid "Prefer percentage"
 msgstr "Föredra procent"
 
-#, fuzzy
 msgctxt "#31501"
 msgid "Prefer local list information"
-msgstr "Föredrar lokal listinformation"
+msgstr "Föredra lokal listinformation"
 
-#, fuzzy
 msgctxt "#31502"
 msgid "On back, widgets do not return to initial position"
-msgstr "På baksidan återgår inte widgetar till ursprunglig position"
+msgstr "Återgå inte till ursprungsläget vid bakåt"
 
-#, fuzzy
 msgctxt "#31503"
 msgid "On up, when at first widget, do not jump back to last widget"
-msgstr "På upp, när du är vid första widgeten, hoppa inte tillbaka till sista widgeten"
+msgstr "Hoppa inte tillbaka till sista widgeten vid uppåt på första widgeten"
 
-#, fuzzy
 msgctxt "#31504"
 msgid "On down, when at last widget, widgets do not return to initial position"
-msgstr "Vid nedgång, när den sista widgeten har nåtts, återgår inte widgetarna till ursprunglig position"
+msgstr "Återgå inte till ursprungsläget vid nedåt på sista widgeten"
 
-#, fuzzy
 msgctxt "#31505"
 msgid "On up/down at first/last widget, go to last/first widget"
-msgstr "På upp/ner vid första/första widgeten, gå till sista/första widgeten"
+msgstr "Gå till sista/första widgeten vid uppåt/nedåt på första/sista widgeten"
 
 msgctxt "#31506"
 msgid "More clean & minimal"
@@ -2061,15 +2021,13 @@ msgctxt "#31510"
 msgid "Recent recordings"
 msgstr "Nya inspelningar"
 
-#, fuzzy
 msgctxt "#31511"
 msgid "Grouped recent recordings"
-msgstr "Grupperade nya inspelningar"
+msgstr "Grupperade senaste inspelningar"
 
-#, fuzzy
 msgctxt "#31512"
 msgid "Grouped deleted recordings"
-msgstr "Grupperade raderade inspelningar"
+msgstr "Grupperade borttagna inspelningar"
 
 msgctxt "#31513"
 msgid "Override play function with TMDB helper play function"
@@ -2095,7 +2053,6 @@ msgctxt "#31518"
 msgid "Unwatched Tv Shows"
 msgstr "Osedda TV-serier"
 
-#, fuzzy
 msgctxt "#31519"
 msgid "Hide background of channel icon"
 msgstr "Dölj bakgrunden för kanalikonen"
@@ -2120,15 +2077,13 @@ msgctxt "#31524"
 msgid "IMDB Position"
 msgstr "IMDB-position"
 
-#, fuzzy
 msgctxt "#31525"
 msgid "Use default MPAA rating icons"
 msgstr "Använd standardikoner för MPAA-klassificering"
 
-#, fuzzy
 msgctxt "#31526"
 msgid "Use default selectbox"
-msgstr "Använd standard selectbox"
+msgstr "Använd standardurvalsruta"
 
 msgctxt "#31527"
 msgid "Small Fanart"
@@ -2138,24 +2093,21 @@ msgctxt "#31528"
 msgid "Small Thumbnail"
 msgstr "Liten miniatyrbild"
 
-#, fuzzy
 msgctxt "#31529"
 msgid "Small Poster Thumbnail"
 msgstr "Liten miniatyrbild för affisch"
 
-#, fuzzy
 msgctxt "#31530"
 msgid "Seasons Info v2"
-msgstr "Årstider Info v2"
+msgstr "Säsongsinfo v2"
 
 msgctxt "#31531"
 msgid "Up Next Addon"
 msgstr "Up Next-tillägget"
 
-#, fuzzy
 msgctxt "#31532"
 msgid "Use thumbnail instead of fanart"
-msgstr "Använd miniatyrbild istället för fanart"
+msgstr "Använd miniatyrbild i stället för fanart"
 
 msgctxt "#31533"
 msgid "Clean and minimal"
@@ -2169,19 +2121,17 @@ msgctxt "#31536"
 msgid "Audio streams"
 msgstr "Ljudströmmar"
 
-#, fuzzy
 msgctxt "#31537"
 msgid "Info slider"
-msgstr "Info-slider"
+msgstr "Informationsreglage"
 
-#, fuzzy
 msgctxt "#31538"
 msgid "Blur radius"
-msgstr "Radie för oskärpa"
+msgstr "Oskärperadie"
 
 msgctxt "#31539"
 msgid "Blend (0-100%)"
-msgstr "Blandning (0-100%)"
+msgstr "Blandning (0–100 %)"
 
 msgctxt "#31540"
 msgid "Image quality"
@@ -2195,10 +2145,9 @@ msgctxt "#31542"
 msgid "Blur quality"
 msgstr "Oskärpekvalitet"
 
-#, fuzzy
 msgctxt "#31543"
 msgid "Use colorbox script"
-msgstr "Använda colorbox-skript"
+msgstr "Använd Colorbox-skript"
 
 msgctxt "#31550"
 msgid "Additional fanart"
@@ -2208,10 +2157,9 @@ msgctxt "#31551"
 msgid "Try to lock skin colors/theme/fonts"
 msgstr "Försök att låsa skalfärger/tema/typsnitt"
 
-#, fuzzy
 msgctxt "#31553"
 msgid "Show logo AZR in settings"
-msgstr "Visa logotypen AZR i inställningarna"
+msgstr "Visa AZR-logotypen i inställningarna"
 
 msgctxt "#31554"
 msgid "HD Movies"
@@ -2221,15 +2169,13 @@ msgctxt "#31555"
 msgid "Hide, when not focused"
 msgstr "Dölj, när inte fokuserad"
 
-#, fuzzy
 msgctxt "#31556"
 msgid "Hide, when not focused/used"
-msgstr "Dölj, när du inte fokuserar/använder"
+msgstr "Dölj när det inte är fokuserat eller används"
 
-#, fuzzy
 msgctxt "#31557"
 msgid "Hide seekbar"
-msgstr "Dölj sökfältet"
+msgstr "Dölj spolningsfältet"
 
 msgctxt "#31558"
 msgid "Hide OSD"
@@ -2275,10 +2221,9 @@ msgctxt "#31568"
 msgid "ClearLogo/Art"
 msgstr "ClearLogo/Art"
 
-#, fuzzy
 msgctxt "#31569"
 msgid "Clearlogo instead of title"
-msgstr "Clearlogo istället för titel"
+msgstr "Visa ClearLogo i stället för titel"
 
 msgctxt "#31570"
 msgid "Icon media flags"
@@ -2288,24 +2233,21 @@ msgctxt "#31571"
 msgid "Media flags"
 msgstr "Mediaflaggor"
 
-#, fuzzy
 msgctxt "#31572"
 msgid "Play/pause info"
-msgstr "Spela/paus-info"
+msgstr "Spela upp-/pausinformation"
 
 msgctxt "#31573"
 msgid "Clock"
 msgstr "Klocka"
 
-#, fuzzy
 msgctxt "#31574"
 msgid "PVR technical info"
-msgstr "Teknisk information om PVR"
+msgstr "Teknisk PVR-information"
 
-#, fuzzy
 msgctxt "#31575"
 msgid "Default selectbox"
-msgstr "Standard selectbox"
+msgstr "Standardurvalsruta"
 
 msgctxt "#31576"
 msgid "Scrollbar"
@@ -2327,10 +2269,9 @@ msgctxt "#31580"
 msgid "Effect settings"
 msgstr "Effektinställningar"
 
-#, fuzzy
 msgctxt "#31581"
 msgid "Enable blur / twotone / pixelate"
-msgstr "Aktivera oskärpa / twotone / pixelate"
+msgstr "Aktivera oskärpa/tvåtoning/pixling"
 
 msgctxt "#31582"
 msgid "Effect"
@@ -2340,15 +2281,13 @@ msgctxt "#31583"
 msgid "Show behind slideshow"
 msgstr "Visa bakom bildspelet"
 
-#, fuzzy
 msgctxt "#31584"
 msgid "Make focused items glow"
-msgstr "Få fokuserade objekt att lysa"
+msgstr "Låt fokuserade objekt lysa"
 
-#, fuzzy
 msgctxt "#31585"
 msgid "Zoom focused items"
-msgstr "Zooma in fokuserade objekt"
+msgstr "Zooma fokuserade objekt"
 
 msgctxt "#31586"
 msgid "low"
@@ -2366,10 +2305,9 @@ msgctxt "#31589"
 msgid "Enable auto scrolling for titles"
 msgstr "Aktivera automatisk rullning för titlar"
 
-#, fuzzy
 msgctxt "#31590"
 msgid "Glow intensity of focused items"
-msgstr "Ljusintensitet för fokuserade föremål"
+msgstr "Ljusintensitet för fokuserade objekt"
 
 msgctxt "#31591"
 msgid "V2"
@@ -2379,19 +2317,17 @@ msgctxt "#31592"
 msgid "List type"
 msgstr "Listtyp"
 
-#, fuzzy
 msgctxt "#31593"
 msgid "Enable auto playing trailers in flix views"
-msgstr "Aktivera automatisk uppspelning av trailers i flixvisningar"
+msgstr "Aktivera automatisk uppspelning av trailrar i Flix-vyer"
 
 msgctxt "#31594"
 msgid "Stop playback on next"
 msgstr "Stoppa uppspelningen på nästa"
 
-#, fuzzy
 msgctxt "#31595"
 msgid "Try to hide black bars"
-msgstr "Försök att dölja svarta fält"
+msgstr "Försök dölja svarta fält"
 
 msgctxt "#31596"
 msgid "playing"
@@ -2405,10 +2341,9 @@ msgctxt "#31598"
 msgid "caching"
 msgstr "cachning"
 
-#, fuzzy
 msgctxt "#31599"
 msgid "Auto start delay"
-msgstr "Fördröjning av automatisk start"
+msgstr "Fördröjning före automatisk start"
 
 msgctxt "#31600"
 msgid "Use old widget movement"
@@ -2430,10 +2365,9 @@ msgctxt "#31606"
 msgid "Maximal"
 msgstr "Maximal"
 
-#, fuzzy
 msgctxt "#31607"
 msgid "On back, jump to first item in widget list"
-msgstr "På baksidan, hoppa till första objektet i widgetlistan"
+msgstr "Hoppa till första objektet i widgetlistan vid bakåt"
 
 msgctxt "#31608"
 msgid "After that, focus home menu"
@@ -2463,10 +2397,9 @@ msgctxt "#31630"
 msgid "Hub widget content type"
 msgstr "Innehållstyp för hubbwidget"
 
-#, fuzzy
 msgctxt "#31631"
 msgid "Playback action when video info dialog is shown"
-msgstr "Uppspelningsåtgärd när dialogrutan för videoinformation visas"
+msgstr "Uppspelningsåtgärd när videoinforutan visas"
 
 msgctxt "#31632"
 msgid "Stop playback when item is no longer focused"
@@ -2484,10 +2417,9 @@ msgctxt "#31651"
 msgid "Icon"
 msgstr "Ikon"
 
-#, fuzzy
 msgctxt "#31652"
 msgid "Use embuary helper instead of litebox"
-msgstr "Använd embuary helper istället för litebox"
+msgstr "Använd Embuary Helper i stället för Litebox"
 
 msgctxt "#31653"
 msgid "blur"
@@ -2541,10 +2473,9 @@ msgctxt "#31671"
 msgid "On right"
 msgstr "Till höger"
 
-#, fuzzy
 msgctxt "#31672"
 msgid "On up"
-msgstr "Upp:"
+msgstr "Vid uppåt"
 
 msgctxt "#31673"
 msgid "Show clearart"
@@ -2658,24 +2589,21 @@ msgctxt "#31704"
 msgid "Small fanart"
 msgstr "Liten fanart"
 
-#, fuzzy
 msgctxt "#31705"
 msgid "Small poster fanart"
-msgstr "Liten affisch fanart"
+msgstr "Liten affischfanart"
 
-#, fuzzy
 msgctxt "#31706"
 msgid "Use keyart instead of poster"
-msgstr "Använd keyart istället för poster"
+msgstr "Använd keyart i stället för affisch"
 
 msgctxt "#31707"
 msgid "Rating stars"
 msgstr "Betyg stjärnor"
 
-#, fuzzy
 msgctxt "#31708"
 msgid "Auto show now playing info after 5 seconds delay if hidden"
-msgstr "Automatisk visning av information som spelas nu efter 5 sekunders fördröjning om den är dold"
+msgstr "Visa automatiskt information om pågående uppspelning efter fem sekunders fördröjning om den är dold"
 
 msgctxt "#31709"
 msgid "Only hide menu items"
